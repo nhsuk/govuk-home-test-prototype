@@ -46,22 +46,234 @@
 
       <p>Each person with symptoms in your household should register separately by entering their own details in this form.</p>
 
-      <div class="govuk-warning-text">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-warning-text__assistive">Warning</span>
-          It is a criminal offence to register for a test through this portal by pretending that you are a keyworker. The maximum penalty if convicted of such an offence is 10 years imprisonment and a fine.
-        </strong>
-      </div>
+      <p class="govuk-!-font-weight-bold">It is a criminal offence to register for a test through this portal by pretending that you are a keyworker. The maximum penalty if convicted of such an offence is 10 years imprisonment and a fine.</p>
+      <p class="govuk-!-font-weight-bold">You must not use this service if you haven’t been invited to a test.</p>
+      
+      <form class="form govuk-!-margin-top-6" action="/action/register" method="post">
 
-      <p>You must not use this service if you haven’t been invited to a test.</p>
+        <h2 class="govuk-heading-l">Personal information</h2> 
 
-      <a href="" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
-        Start now
-        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
-          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
-        </svg>
-      </a>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">
+                What is your name?
+              </h3>
+            </legend>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="first-name">
+                First name
+              </label>
+              <input class="govuk-input" id="first-name" name="first-name" type="text" spellcheck="false">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="last-name">
+                Last name
+              </label>
+              <input class="govuk-input" id="last-name" name="last-name" type="text" spellcheck="false">
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <h3 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="postcode" aria-describedby="postcode-hint">
+              What is your postcode?
+            </label>
+          </h3>
+          <span id="postcode-hint" class="govuk-hint">
+            Enter a UK postcode
+          </span>
+          <input class="govuk-input govuk-input--width-10" id="postcode" name="postcode" type="text">
+        </div>
+      
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">
+                What is your date of birth?
+              </h3>
+            </legend>
+            <span id="date-of-birth-hint" class="govuk-hint">
+              For example, 19 7 1986
+            </span>
+            <div class="govuk-date-input" id="date-of-birth">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="date-of-birth-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-day" name="date-of-birth-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="date-of-birth-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-month" name="date-of-birth-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="date-of-birth-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-birth-year" name="date-of-birth-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">
+                What is your gender?
+              </h3>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="male" name="male" type="radio" value="Male">
+                <label class="govuk-label govuk-radios__label" for="male">
+                  Male
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="female" name="female" type="radio" value="Female">
+                <label class="govuk-label govuk-radios__label" for="female">
+                  Female
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="mobile-number-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">
+                What is your mobile number?
+              </h3>
+            </legend>
+
+            <span id="mobile-number-hint" class="govuk-hint">
+              We’ll text you your registration confirmation and your COVID-19 test results.
+            </span>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="mobile-number">
+                Mobile number
+              </label>
+              <input class="govuk-input govuk-input--width-10" id="mobile-number" name="mobile-number" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="confirm-mobile-number">
+                Re-enter mobile number
+              </label>
+              <input class="govuk-input govuk-input--width-10" id="confirm-mobile-number" name="confirm-mobile-number" type="text">
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">
+                What is your email address?
+              </h3>
+            </legend>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="email">
+                Email address
+              </label>
+              <input class="govuk-input" id="email" name="email" type="text">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="confirm-email">
+                Re-enter email address
+              </label>
+              <input class="govuk-input" id="confirm-email" name="confirm-email" type="text">
+            </div>
+
+          </fieldset>
+        </div>
+
+        <h2 class="govuk-heading-l">Your visit to the test centre</h2> 
+        <p>Please confirm which test centre you’re visiting and when.</p>
+
+        <div class="govuk-form-group">
+          <h3 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="test-centre">
+              Which test centre did you visit?
+            </label>
+          </h3>
+          <select class="govuk-select govuk-!-width-full" id="test-centre" name="test-centre">
+            <option value="0">Location 1</option>
+            <option value="1">Location 2</option>
+            <option value="2">Location 3</option>
+            <option value="3">Location 4</option>
+          </select>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="test-centre-date-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">
+                What date did you visit the test centre?
+              </h3>
+            </legend>
+            <span id="test-centre-date-hint" class="govuk-hint">
+              For example, 30 6 2020
+            </span>
+            <div class="govuk-date-input" id="test-centre-date">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="test-centre-date-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="test-centre-date-day" name="test-centre-date-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="test-centre-date-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="test-centre-date-month" name="test-centre-date-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="test-centre-date-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="test-centre-date-year" name="test-centre-date-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <p class="govuk-body">If you would like a copy of the privacy notice for this service, email DHSC’s Data Protection Officer at <a data-v-613aa4ba="" href="mailto:contactus@dhsc.gov.uk">contactus@dhsc.gov.uk</a></p>
+
+        <button class="govuk-button" type="submit" data-module="govuk-button">
+          Confirm registration
+        </button>
+
+        <p class="govuk-body">Having trouble? Call our support line on 020 3514 3817</p>
+
+      </form>
+      
+
 
     </div>
   </div>
