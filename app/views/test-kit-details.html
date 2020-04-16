@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }} - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Enter your test kit details</h1>
+      <p>Use your phone or computer webcam to scan one of the 4 identical barcodes inside your package. These are different from your pre-paid Royal Mail return package barcode. You can also enter the barcode number manually, instead.</p>
+
+      <form class="form" action="/action/test-kit-details" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="barcode-number">
+            Test kit barcode number
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="barcode-number" name="barcode-number" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="barcode-number-confirm">
+            Confirm test kit barcode number
+          </label>
+          <input class="govuk-input govuk-input--width-20" id="barcode-number-confirm" name="barcode-number-confirm" type="text">
+        </div>
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">Continue</button>
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">Scan barcode</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
