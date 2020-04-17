@@ -29,58 +29,39 @@
 </header>
 {% endblock %}
 
-{% block beforeContent %}
-{% endblock %}
-
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <form action="/v1/confirm/check-your-answers" method="post">
+        <h1 class="govuk-heading-l">Confirm your details</h1>
 
-          <p class="govuk-!-font-weight-bold">Please only complete this information if you are already at the test centre. We need this information to confirm your identity.</p>
-
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" role="group" aria-describedby="confirm-date-of-birth-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h1 class="govuk-fieldset__heading">
-                  Confirm your date of birth
-                </h1>
-              </legend>
-              <span id="confirm-date-of-birth-hint" class="govuk-hint">
-                For example, 19 7 1986
-              </span>
-              <div class="govuk-date-input" id="date-of-birth">
-                <div class="govuk-date-input__item">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="confirm-date-of-birth-day">
-                      Day
-                    </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="confirm-date-of-birth-day" name="confirm-date-of-birth-day" type="text" pattern="[0-9]*" autocomplete="bday-day" inputmode="numeric">
-                  </div>
-                </div>
-                <div class="govuk-date-input__item">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="date-of-birth-month">
-                      Month
-                    </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="confirm-date-of-birth-month" name="confirm-date-of-birth-month" type="text" pattern="[0-9]*" autocomplete="bday-month" inputmode="numeric">
-                  </div>
-                </div>
-                <div class="govuk-date-input__item">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="date-of-birth-year">
-                      Year
-                    </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="confirm-date-of-birth-year" name="confirm-date-of-birth-year" type="text" pattern="[0-9]*" autocomplete="bday-year" inputmode="numeric">
-                  </div>
-                </div>
-              </div>
-            </fieldset>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Sarah Philips
+            </dd>
           </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Mobile number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              +447234567894
+            </dd>
+          </div>
+        </dl>
 
-          <button class="govuk-button" type="submit" data-module="govuk-button">
-            Continue
+        <p class="govuk-body">We'll send your test results to this number. If your name or number are incorrect, tell a member of staff at the test centre. If you're at home, call 020 3514 3817.</p>
+
+        <form action="/v1/confirm/barcode" method="post" novalidate>
+
+          <input type="hidden" name="answers-checked" value="true">
+
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Confirm
           </button>
 
         </form>

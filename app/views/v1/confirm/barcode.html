@@ -29,61 +29,45 @@
 </header>
 {% endblock %}
 
-{% block beforeContent %}
-{% endblock %}
-
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <form action="/v1/confirm/check-your-answers" method="post">
+        <h1 class="govuk-heading-l">Scan the barcode</h1>
+        <p class="govuk-body">Scan the barcode on the test kit. If you cannot scan it, enter the barcode number below.</p>
 
-          <p class="govuk-!-font-weight-bold">Please only complete this information if you are already at the test centre. We need this information to confirm your identity.</p>
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Scan my barcode
+        </button>
 
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" role="group" aria-describedby="confirm-date-of-birth-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h1 class="govuk-fieldset__heading">
-                  Confirm your date of birth
-                </h1>
-              </legend>
-              <span id="confirm-date-of-birth-hint" class="govuk-hint">
-                For example, 19 7 1986
-              </span>
-              <div class="govuk-date-input" id="date-of-birth">
-                <div class="govuk-date-input__item">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="confirm-date-of-birth-day">
-                      Day
-                    </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="confirm-date-of-birth-day" name="confirm-date-of-birth-day" type="text" pattern="[0-9]*" autocomplete="bday-day" inputmode="numeric">
-                  </div>
-                </div>
-                <div class="govuk-date-input__item">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="date-of-birth-month">
-                      Month
-                    </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="confirm-date-of-birth-month" name="confirm-date-of-birth-month" type="text" pattern="[0-9]*" autocomplete="bday-month" inputmode="numeric">
-                  </div>
-                </div>
-                <div class="govuk-date-input__item">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="date-of-birth-year">
-                      Year
-                    </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="confirm-date-of-birth-year" name="confirm-date-of-birth-year" type="text" pattern="[0-9]*" autocomplete="bday-year" inputmode="numeric">
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-          </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h3 class="govuk-fieldset__heading">
+                What is your barcode number?
+              </h3>
+            </legend>
 
-          <button class="govuk-button" type="submit" data-module="govuk-button">
-            Continue
-          </button>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="barcode-number">
+                Barcode number
+              </label>
+              <input class="govuk-input" id="barcode-number" name="barcode-number" type="text" autocomplete="email">
+            </div>
 
-        </form>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="confirm-barcode-number">
+                Re-enter barcode number
+              </label>
+              <input class="govuk-input" id="confirm-barcode-number" name="confirm-barcode-number" type="text">
+            </div>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" type="submit" data-module="govuk-button">
+          Continue
+        </button>
 
     </div>
   </div>

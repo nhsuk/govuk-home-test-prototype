@@ -1,11 +1,11 @@
 {% extends "../../layout.html" %}
 
 {% block pageTitle %}
-  {{ serviceName }} - GOV.UK
+  Confirm your details for COVID-19 testing - GOV.UK
 {% endblock %}
 
 {% block header %}
-<header class="govuk-header" role="banner" data-module="govuk-header">
+<header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
     <div class="govuk-header__logo">
       <a href="/" class="govuk-header__link govuk-header__link--homepage">
@@ -21,69 +21,44 @@
       </a>
     </div>
     <div class="govuk-header__content">
-      <a href="/v1/register" class="govuk-header__link govuk-header__link--service-name">
-        {{ serviceName }}
+      <a href="/v1/confirm" class="govuk-header__link govuk-header__link--service-name">
+        Confirm your details for COVID-19 testing
       </a>
     </div>
   </div>
 </header>
 {% endblock %}
 
-{% block beforeContent %}
-{% endblock %}
-
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <form action="/v1/confirm/check-your-answers" method="post">
+      <div class="govuk-panel govuk-panel--confirmation govuk-!-padding-8 govuk-!-margin-bottom-8">
+        <h1 class="govuk-panel__title">Registration complete</h1>
+      </div>
 
-          <p class="govuk-!-font-weight-bold">Please only complete this information if you are already at the test centre. We need this information to confirm your identity.</p>
+      <h2 class="govuk-heading-m">We’ve sent you a text message from COVIDTest to confirm your registration.</h2>
+      <p class="govuk-body">There may be a delay of up to 30 minutes to receive your text message.</p>
+      
+      <h2 class="govuk-heading-m">If you’re registered whilst at the test centre</h2>
+      <p class="govuk-body">Drive through as instructed by the security assistant and signs. If the text message doesn’t arrive or you need help, honk your horn twice.</p>
 
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" role="group" aria-describedby="confirm-date-of-birth-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h1 class="govuk-fieldset__heading">
-                  Confirm your date of birth
-                </h1>
-              </legend>
-              <span id="confirm-date-of-birth-hint" class="govuk-hint">
-                For example, 19 7 1986
-              </span>
-              <div class="govuk-date-input" id="date-of-birth">
-                <div class="govuk-date-input__item">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="confirm-date-of-birth-day">
-                      Day
-                    </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="confirm-date-of-birth-day" name="confirm-date-of-birth-day" type="text" pattern="[0-9]*" autocomplete="bday-day" inputmode="numeric">
-                  </div>
-                </div>
-                <div class="govuk-date-input__item">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="date-of-birth-month">
-                      Month
-                    </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="confirm-date-of-birth-month" name="confirm-date-of-birth-month" type="text" pattern="[0-9]*" autocomplete="bday-month" inputmode="numeric">
-                  </div>
-                </div>
-                <div class="govuk-date-input__item">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="date-of-birth-year">
-                      Year
-                    </label>
-                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="confirm-date-of-birth-year" name="confirm-date-of-birth-year" type="text" pattern="[0-9]*" autocomplete="bday-year" inputmode="numeric">
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-          </div>
+      <h2 class="govuk-heading-m">If you’re not at the test centre yet</h2>
+      <p class="govuk-body">Please open the link in the text message when instructed to do so after you arrive at the test centre.</p>
 
-          <button class="govuk-button" type="submit" data-module="govuk-button">
-            Continue
-          </button>
+      <h2 class="govuk-heading-m">If you’ve already had your test and left the test centre</h2>
+      <ol class="govuk-list govuk-list--number">
+        <li>Open the text message you received from COVIDTest and tap on the link in the message</li>
+        <li>When prompted, please enter your date of birth, name and mobile phone number to confirm that it’s you</li>
+        <li>Please scan the barcode attached on your TEST REGISTRATION CARD. Tap the ‘Scan my barcode’ button and point your phone camera at the barcode. The scanning should happen instantaneously</li>
+        <li>If you are unable to scan your barcode, please enter the barcode in the box below and then re-enter. Tap the ‘Confirm’ button when you have submitted your barcode</li>
+        <li>Your test is now linked to you and you will get your results delivered to this mobile number.</li>
+      </ol>
 
-        </form>
+      <h2 class="govuk-heading-m">If you’ve already had your test and left the test centre</h2>
+      <p class="govuk-body">Please follow the instructions included with your testing kit.</p>
+      <p class="govuk-body">If you experience issues with registration and scanning please call the <strong>HELPDESK</strong> (open 9am to 6pm) on 0203 514 3817. We are not able to answer medical queries or give you information about your result.</p>
+
 
     </div>
   </div>
