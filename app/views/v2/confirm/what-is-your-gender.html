@@ -48,13 +48,13 @@
             </legend>
             <div class="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="male" name="male" type="radio" value="Male">
+                <input class="govuk-radios__input" id="male" name="gender" type="radio" value="Male" {{ checked("gender", "Male") }}>
                 <label class="govuk-label govuk-radios__label" for="male">
                   Male
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="female" name="female" type="radio" value="Female">
+                <input class="govuk-radios__input" id="female" name="gender" type="radio" value="Female" {{ checked("gender", "Female") }}>
                 <label class="govuk-label govuk-radios__label" for="female">
                   Female
                 </label>

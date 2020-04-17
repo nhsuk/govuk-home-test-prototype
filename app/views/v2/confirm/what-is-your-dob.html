@@ -55,7 +55,7 @@
                   <label class="govuk-label govuk-date-input__label" for="date-of-birth-day">
                     Day
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-day" name="date-of-birth-day" type="text" pattern="[0-9]*" autocomplete="bday-day" inputmode="numeric">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-day" name="date-of-birth-day" type="text" pattern="[0-9]*" autocomplete="bday-day" inputmode="numeric" value="{{ data['date-of-birth-day'] }}">
                 </div>
               </div>
               <div class="govuk-date-input__item">
@@ -63,7 +63,7 @@
                   <label class="govuk-label govuk-date-input__label" for="date-of-birth-month">
                     Month
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-month" name="date-of-birth-month" type="text" pattern="[0-9]*" autocomplete="bday-month" inputmode="numeric">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-month" name="date-of-birth-month" type="text" pattern="[0-9]*" autocomplete="bday-month" inputmode="numeric" value="{{ data['date-of-birth-month'] }}">
                 </div>
               </div>
               <div class="govuk-date-input__item">
@@ -71,7 +71,7 @@
                   <label class="govuk-label govuk-date-input__label" for="date-of-birth-year">
                     Year
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-birth-year" name="date-of-birth-year" type="text" pattern="[0-9]*" autocomplete="bday-year" inputmode="numeric">
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-birth-year" name="date-of-birth-year" type="text" pattern="[0-9]*" autocomplete="bday-year" inputmode="numeric" value="{{ data['date-of-birth-year'] }}">
                 </div>
               </div>
             </div>

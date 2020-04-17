@@ -37,7 +37,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds-from-desktop">
 
-        <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+        <h1 class="govuk-heading-l">Check your answers before sending your registration</h1>
 
         <h2 class="govuk-heading-m">Personal details</h2>
 
@@ -47,10 +47,10 @@
               Name
             </dt>
             <dd class="govuk-summary-list__value">
-              Sarah Philips
+             {{ data['first-name'] }} {{ data['last-name'] }} 
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
+              <a class="govuk-link" href="/v2/confirm/what-is-your-name">
                 Change<span class="govuk-visually-hidden"> name</span>
               </a>
             </dd>
@@ -60,10 +60,10 @@
               Date of birth
             </dt>
             <dd class="govuk-summary-list__value">
-              5 January 1978
+              {{ data['date-of-birth-day'] }} {{ data['date-of-birth-month'] }} {{ data['date-of-birth-year'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
+              <a class="govuk-link" href="/v2/confirm/what-is-your-dob">
                 Change<span class="govuk-visually-hidden"> date of birth</span>
               </a>
             </dd>
@@ -73,10 +73,10 @@
               Gender
             </dt>
             <dd class="govuk-summary-list__value">
-              Female
+              {{ data['gender'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
+              <a class="govuk-link" href="/v2/confirm/what-is-your-gender">
                 Change<span class="govuk-visually-hidden"> gender</span>
               </a>
             </dd>
@@ -86,10 +86,10 @@
               Postcode
             </dt>
             <dd class="govuk-summary-list__value">
-              SE23 6FH
+              {{ data['postcode'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
+              <a class="govuk-link" href="/v2/confirm/what-is-your-postcode">
                 Change<span class="govuk-visually-hidden"> postcode</span>
               </a>
             </dd>
@@ -99,10 +99,10 @@
               Mobile number
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body">07700 900457</p>
+              {{ data['mobile-number'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
+              <a class="govuk-link" href="/v2/confirm/what-is-your-mobile-number">
                 Change<span class="govuk-visually-hidden"> mobile number</span>
               </a>
             </dd>
@@ -112,10 +112,10 @@
               Email address
             </dt>
             <dd class="govuk-summary-list__value">
-              <p class="govuk-body">sarah.philips@email.com</p>
+              {{ data['email'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
+              <a class="govuk-link" href="/v2/confirm/what-is-your-email">
                 Change<span class="govuk-visually-hidden"> email address</span>
               </a>
             </dd>
@@ -130,10 +130,10 @@
               Test centre
             </dt>
             <dd class="govuk-summary-list__value">
-              Location 1
+              {{ data['test-centre'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
+              <a class="govuk-link" href="/v2/confirm/which-test-centre">
                 Change<span class="govuk-visually-hidden"> test centre</span>
               </a>
             </dd>
@@ -143,17 +143,17 @@
               Date of visit
             </dt>
             <dd class="govuk-summary-list__value">
-              31st March 2020
+              {{ data['test-centre-date-day'] }} {{ data['test-centre-date-month'] }} {{ data['test-centre-date-year'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
+              <a class="govuk-link" href="/v2/confirm/which-test-centre-date">
                 Change<span class="govuk-visually-hidden"> date of viist</span>
               </a>
             </dd>
           </div>
         </dl>
 
-        <h2 class="govuk-heading-m">Now send your application</h2>
+        <h2 class="govuk-heading-m">Now send your registration</h2>
 
         <p class="govuk-body">By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
