@@ -1,7 +1,7 @@
 {% extends "../../layout.html" %}
 
 {% block pageTitle %}
-  Ask for a drive-through test centre appointment - GOV.UK
+  What is your mobile phone number? - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -21,7 +21,7 @@
       </a>
     </div>
     <div class="govuk-header__content">
-      <a href="/v2/get-a-test/test-centre" class="govuk-header__link govuk-header__link--service-name">
+      <a href="https://nhsuk-book-a-test-prototype.herokuapp.com/govuk" class="govuk-header__link govuk-header__link--service-name">
         Ask for a coronavirus test
       </a>
     </div>
@@ -30,27 +30,33 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/v2/get-a-test/test-kit-type">Back</a>
+  <a href="/v2/ask-for-a-coronavirus-test/what-is-your-name" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+        
+      <form action="/v2/ask-for-a-coronavirus-test/check-your-answers" method="post">
 
-      <h1 class="govuk-heading-l">Ask for a drive-through test centre appointment</h1>
-      <p class="govuk-body">You will need to drive to the centre or have someone you live with drive you there. Do not drive yourself if you are very unwell.</p>
-      <p class="govuk-body">Do not use a taxi.</p>
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--l" for="mobile-number">
+              What is your mobile phone number?
+            </label>
+          </h1>
+          <span id="telephone-hint" class="govuk-hint">
+            We need your mobile phone number to send you a text message with a link to book an appointment.
+          </span>
+          <input class="govuk-input govuk-input--width-10" id="mobile-number" name="mobile-number" type="text" aria-describedby="telephone-hint" pattern="[0-9]*" inputmode="numeric" spellcheck="false" value="{{ data['mobile-number'] }}">
+        </div>
 
-      <p class="govuk-body">To register, you will need to tell us:</p>
-      <ul class="govuk-list govuk-list govuk-list--bullet">
-        <li>your name</li>
-        <li>your mobile phone number</li>
-      </ul>
+        <button class="govuk-button" type="submit" data-module="govuk-button">
+          Continue
+        </button>
 
-      <a role="button" draggable="false" class="govuk-button" data-module="govuk-button" href="/v2/get-a-test/what-is-your-name">
-        Continue
-      </a>
-
+      </form>
+    
     </div>
   </div>
 {% endblock %}

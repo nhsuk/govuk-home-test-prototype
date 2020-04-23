@@ -7,7 +7,7 @@ router.post('/v2/action/test-kit-type', function (req, res) {
   var testKit = req.session.data['test-kit']
 
   if (testKit == "By visiting a drive-through test centre"){
-    res.redirect('/v2/get-a-test/test-centre')
+    res.redirect('/v2/ask-for-a-coronavirus-test/test-centre')
   }
   else if (testKit == "By requesting a home test kit"){
     res.redirect('https://www.gov.uk')

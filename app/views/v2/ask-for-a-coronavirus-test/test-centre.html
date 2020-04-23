@@ -1,7 +1,7 @@
 {% extends "../../layout.html" %}
 
 {% block pageTitle %}
-  What is your name? - GOV.UK
+  Ask for a drive-through test centre appointment - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -21,7 +21,7 @@
       </a>
     </div>
     <div class="govuk-header__content">
-      <a href="https://nhsuk-book-a-test-prototype.herokuapp.com/govuk" class="govuk-header__link govuk-header__link--service-name">
+      <a href="/v2/ask-for-a-coronavirus-test/test-centre" class="govuk-header__link govuk-header__link--service-name">
         Ask for a coronavirus test
       </a>
     </div>
@@ -30,46 +30,27 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a href="/v2/get-a-test/test-centre" class="govuk-back-link">Back</a>
+  <a class="govuk-back-link" href="/v2/ask-for-a-coronavirus-test/test-kit-type">Back</a>
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        
-      <form action="/v2/get-a-test/what-is-your-mobile-number" method="post">
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                What is your name?
-              </h1>
-            </legend>
+      <h1 class="govuk-heading-l">Ask for a drive-through test centre appointment</h1>
+      <p class="govuk-body">You will need to drive to the centre or have someone you live with drive you there. Do not drive yourself if you are very unwell.</p>
+      <p class="govuk-body">Do not use a taxi.</p>
 
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="first-name">
-                First name
-              </label>
-              <input class="govuk-input" id="first-name" name="first-name" type="text" spellcheck="false" autocomplete="given-name" value="{{ data['first-name'] }}">
-            </div>
+      <p class="govuk-body">To register, you will need to tell us:</p>
+      <ul class="govuk-list govuk-list govuk-list--bullet">
+        <li>your name</li>
+        <li>your mobile phone number</li>
+      </ul>
 
-            <div class="govuk-form-group">
-              <label class="govuk-label" for="last-name">
-                Last name
-              </label>
-              <input class="govuk-input" id="last-name" name="last-name" type="text" spellcheck="false" autocomplete="family-name" value="{{ data['last-name'] }}">
-            </div>
+      <a role="button" draggable="false" class="govuk-button" data-module="govuk-button" href="/v2/ask-for-a-coronavirus-test/what-is-your-name">
+        Continue
+      </a>
 
-          </fieldset>
-        </div>
-
-        <button class="govuk-button" type="submit" data-module="govuk-button">
-          Continue
-        </button>
-
-      </form>
-    
     </div>
   </div>
 {% endblock %}

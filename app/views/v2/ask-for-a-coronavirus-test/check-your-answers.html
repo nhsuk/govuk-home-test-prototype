@@ -30,7 +30,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a href="/v2/get-a-test/what-is-your-mobile-number" class="govuk-back-link">Back</a>
+  <a href="/v2/ask-for-a-coronavirus-test/what-is-your-mobile-number" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -48,7 +48,7 @@
              {{ data['first-name'] }} {{ data['last-name'] }} 
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="/v2/get-a-test/what-is-your-name">
+              <a class="govuk-link" href="/v2/ask-for-a-coronavirus-test/what-is-your-name">
                 Change<span class="govuk-visually-hidden"> name</span>
               </a>
             </dd>
@@ -61,7 +61,7 @@
               {{ data['mobile-number'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="/v2/get-a-test/what-is-your-mobile-number">
+              <a class="govuk-link" href="/v2/ask-for-a-coronavirus-test/what-is-your-mobile-number">
                 Change<span class="govuk-visually-hidden"> mobile phone number</span>
               </a>
             </dd>
@@ -72,7 +72,7 @@
 
         <p class="govuk-body">By sending this information you are agreeing that, as far as you know, the details you are giving us are correct.</p>
 
-        <form action="/v2/get-a-test/registration-complete" method="post" novalidate>
+        <form action="/v2/ask-for-a-coronavirus-test/registration-complete" method="post" novalidate>
 
           <input type="hidden" name="answers-checked" value="true">
 
