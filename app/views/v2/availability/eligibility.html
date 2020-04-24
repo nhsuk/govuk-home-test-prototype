@@ -1,7 +1,7 @@
 {% extends "../../layout.html" %}
 
 {% block pageTitle %}
- Apply for a coronavirus test if you’re an essential worker - GOV.UK
+ Check if you can have a coronavirus test - GOV.UK
 {% endblock %}
 
 {% block header %}
@@ -29,79 +29,32 @@
 </header>
 {% endblock %}
 
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/v2/availability">Back</a>
+{% endblock %}
+
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">Apply for a coronavirus test if you’re an essential worker</h1>
-      <p class="govuk-body">Use this service to apply for a coronavirus (COVID-19) test if:</p>
+      <h1 class="govuk-heading-l">Check if you can have a coronavirus test</h1>
+      <p class="govuk-body">You can only apply for this test if you’re a key worker who is self-isolating (not able to leave home) because:</p>
       <ul class="govuk-list govuk-list--bullet">
-        <li>you’re an essential worker - for example, NHS staff, teachers and public transport staff</li>
-        <li>you or someone in your household has coronavirus symptoms, so you’re self-isolating and not able to leave your home</li>
+        <li>you have coronavirus symptoms</li>
+        <li>you live with someone who has coronavirus symptoms</li>
       </ul>
+      <p class="govuk-body">You should not apply for this test if you are not a key worker.</p>
 
-      <p class="govuk-body">You can get tests for yourself and for other members of your household.</p>
-      <p class="govuk-body">You’ll be able to choose between a home testing kit or visiting a drive-through test centre.</p>
+      <details data-module="govuk-details" class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">Am I a key worker?</span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>Key workers are people providing an essential service during the coronavirus pandemic. Examples are NHS Staff, teachers, and public transport staff. <a target="_blank" href="https://www.gov.uk/guidance/coronavirus-covid-19-getting-tested#list-of-people-being-tested" class="govuk-link"> Check the full list of key workers on GOV.UK</a></p>
+        </div>
+      </details>
 
-      <h2 class="govuk-heading-m">Test kits available now</h2>
-
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="col">Test type</th>
-            <th class="govuk-table__header" scope="col">Availability</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-               By requesting a home test kit
-            </td>
-            <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--green">Available</strong>
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              By visiting a regional test site in England
-            </td>
-            <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--red">None available</strong>
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              By visiting a regional test site in Scotland
-            </td>
-            <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--green">Available</strong>
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              By visiting a regional test site in Wales
-            </td>
-            <td class="govuk-table__cell">
-               <strong class="govuk-tag govuk-tag--red">None available</strong>
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-              By visiting a regional test site in Northern Ireland
-            </td>
-            <td class="govuk-table__cell">
-              <strong class="govuk-tag govuk-tag--green">Available</strong>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <a href="/v2/availability/eligibility" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
-        Start now
-        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
-          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
-        </svg>
-      </a>
+      <a href="/v2/availability/test-kit-type" class="govuk-button" role="button" draggable="false">OK, I qualify</a>
 
     </div>
   </div>
