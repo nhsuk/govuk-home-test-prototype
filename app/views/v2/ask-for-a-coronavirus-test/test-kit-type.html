@@ -45,23 +45,50 @@
                 How do you want to get the coronavirus test?
               </h1>
             </legend>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="test-kit-home" name="test-kit" type="radio" value="By requesting a home test kit" aria-describedby="test-kit-home-hint">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="test-kit-home">
+                By requesting a home test kit <strong class="govuk-tag govuk-tag--green">Available</strong>
+              </label>
+              <span id="test-kit-home-hint" class="govuk-hint govuk-radios__hint">
+                You can ask for a kit for yourself and anyone else you live with who has coronavirus symptoms. There is an identity check for home test kits.
+              </span>
+            </div>
             <div class="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="test-kit-drive-through" name="test-kit" type="radio" value="By visiting a drive-through test centre" aria-describedby="test-kit-drive-through-hint">
-                <label class="govuk-label govuk-radios__label govuk-label--s" for="test-kit-drive-through">
-                  By visiting a drive-through test centre
+                <input class="govuk-radios__input" id="test-kit-drive-through-england" name="test-kit" type="radio" value="By visiting a regional test site in England" aria-describedby="test-kit-drive-through-hint-england" disabled>
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="test-kit-drive-through-england">
+                  By visiting a regional test site in England <strong class="govuk-tag govuk-tag--red">None available</strong>
                 </label>
-                <span id="test-kit-drive-through-hint" class="govuk-hint govuk-radios__hint">
+                <span id="test-kit-drive-through-hint-england" class="govuk-hint govuk-radios__hint">
                   You or someone you live with must have a car to get to a local test centre
                 </span>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="test-kit-home" name="test-kit" type="radio" value="By requesting a home test kit" aria-describedby="test-kit-home-hint">
-                <label class="govuk-label govuk-radios__label govuk-label--s" for="test-kit-home">
-                 By requesting a home test kit
+                <input class="govuk-radios__input" id="test-kit-drive-through-scotland" name="test-kit" type="radio" value="By visiting a regional test site in Scotland" aria-describedby="test-kit-drive-through-hint-scotland">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="test-kit-drive-through-scotland">
+                  By visiting a regional test site in Scotland <strong class="govuk-tag govuk-tag--green">Available</strong>
                 </label>
-                <span id="test-kit-home-hint" class="govuk-hint govuk-radios__hint">
-                  You can ask for a kit for yourself and anyone else you live with who has coronavirus symptoms. There is an identity check for home test kits.
+                <span id="test-kit-drive-through-hint-scotland" class="govuk-hint govuk-radios__hint">
+                  You or someone you live with must have a car to get to a local test centre
+                </span>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="test-kit-drive-through-wales" name="test-kit" type="radio" value="By visiting a regional test site in Wales" aria-describedby="test-kit-drive-through-hint-wales" disabled>
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="test-kit-drive-through-wales">
+                  By visiting a regional test site in Wales <strong class="govuk-tag govuk-tag--red">None available</strong>
+                </label>
+                <span id="test-kit-drive-through-hint-wales" class="govuk-hint govuk-radios__hint">
+                  You or someone you live with must have a car to get to a local test centre
+                </span>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="test-kit-drive-through-northern-ireland" name="test-kit" type="radio" value="By visiting a regional test site in Northern Ireland" aria-describedby="test-kit-drive-through-hint-northern-ireland ">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="test-kit-drive-through-northern-ireland">
+                  By visiting a regional test site in Northern Ireland <strong class="govuk-tag govuk-tag--green">Available</strong>
+                </label>
+                <span id="test-kit-drive-through-hint-northern-ireland" class="govuk-hint govuk-radios__hint">
+                  You or someone you live with must have a car to get to a local test centre
                 </span>
               </div>
             </div>
