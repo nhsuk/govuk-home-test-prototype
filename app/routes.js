@@ -6,13 +6,13 @@ const router = express.Router()
 router.post('/v2/action/test-kit-type', function (req, res) {
   var testKit = req.session.data['test-kit']
 
-  if (testKit == "By visiting a drive-through test centre"){
-    res.redirect('/v2/ask-for-a-coronavirus-test/test-centre')
+  if (testKit == "By visiting a regional test site in England"){
+    res.redirect('/v2/ask-for-a-coronavirus-test/test-kit-type-regions')
   }
   else if (testKit == "By requesting a home test kit"){
     res.redirect('https://www.gov.uk')
   } else {
-    console.log("Validation error")
+    res.redirect('/v2/ask-for-a-coronavirus-test/test-centre')
   }
 
 })
