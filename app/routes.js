@@ -5,7 +5,7 @@ const router = express.Router()
 router.post('/v2/action/test-kit-type', function (req, res) {
   var testKit = req.session.data['test-kit']
 
-  if (testKit == "By requesting a home test kit"){
+  if (testKit == "Request a home test kit"){
     res.redirect('https://www.gov.uk')
   } else {
     res.redirect('/v2/ask-for-a-coronavirus-test/test-centre')
@@ -17,10 +17,10 @@ router.post('/v2/action/test-kit-type', function (req, res) {
 router.post('/v3/action/test-kit-type', function (req, res) {
   var testKit = req.session.data['test-kit']
 
-  if (testKit == "By visiting a regional test site in England"){
+  if (testKit == "England"){
     res.redirect('/v3/ask-for-a-coronavirus-test/test-kit-type-regions')
   }
-  else if (testKit == "By requesting a home test kit"){
+  else if (testKit == "Request a home test kit"){
     res.redirect('https://www.gov.uk')
   } else {
     res.redirect('/v3/ask-for-a-coronavirus-test/test-centre')
