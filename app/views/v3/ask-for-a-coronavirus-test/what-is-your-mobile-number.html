@@ -48,7 +48,24 @@
           <span id="telephone-hint" class="govuk-hint">
             We need your mobile phone number to send you a text message with a link to book an appointment.
           </span>
-          <input class="govuk-input govuk-input--width-10" id="mobile-number" name="mobile-number" type="text" aria-describedby="telephone-hint" pattern="[0-9]*" inputmode="numeric" spellcheck="false" value="{{ data['mobile-number'] }}">
+          <span id="telephone-hint-format" class="govuk-hint">
+            Enter a mobile phone number, for example, "07700 900123".
+          </span>
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Help with non-UK mobile numbers
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>If you have a non-UK mobile, include one of these before the phone number:</p>
+              <ul>
+                <li>+ and the country code</li>
+                <li>00 and the country code</li>
+              </ul>
+            </div>
+          </details>
+          <input class="govuk-input govuk-input--width-10" id="mobile-number" name="mobile-number" type="text" aria-describedby="telephone-hint telephone-hint-format" pattern="[0-9]*" inputmode="numeric" spellcheck="false" value="{{ data['mobile-number'] }}">
         </div>
 
         <button class="govuk-button" type="submit" data-module="govuk-button">
